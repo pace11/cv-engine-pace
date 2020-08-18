@@ -52,7 +52,7 @@ export default function Home() {
             <TimelineDot color="primary">
               <CreateIcon />
             </TimelineDot>
-            <TimelineConnector />
+            <TimelineConnector className={classes.secondaryTail} />
           </TimelineSeparator>
           <TimelineContent>
             <Paper elevation={3} className={classes.paper}>
