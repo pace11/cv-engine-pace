@@ -5,6 +5,7 @@ import {
   Typography,
   InputBase,
   Button,
+  Box,
 } from '@material-ui/core'
 import { fade, makeStyles } from '@material-ui/core/styles'
 import SearchIcon from '@material-ui/icons/Search'
@@ -66,7 +67,7 @@ const useStyles = makeStyles(theme => ({
   },
 }))
 
-export default function SearchAppBar() {
+export default function Layout({ children }) {
   const classes = useStyles()
 
   return (
@@ -74,7 +75,7 @@ export default function SearchAppBar() {
       <AppBar position="static">
         <Toolbar>
           <Typography className={classes.title} variant="h6" noWrap>
-            CV Engine Pace
+            CV Generator
           </Typography>
           <div className={classes.search}>
             <div className={classes.searchIcon}>
@@ -90,10 +91,11 @@ export default function SearchAppBar() {
             />
           </div>
           <Button variant="contained" className={classes.btnCreate}>
-            Mulai Buat
+            Create Now
           </Button>
         </Toolbar>
       </AppBar>
+      <Box>{children}</Box>
     </div>
   )
 }
